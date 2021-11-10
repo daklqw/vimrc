@@ -20,6 +20,7 @@ set number relativenumber
 set list listchars=tab:\|\ ,trail:@
 set tabstop=4 shiftwidth=4
 set cursorline
+set splitbelow
 colorscheme PaperColor
 syntax on
 
@@ -48,7 +49,14 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Tagbar
 let g:tagbar_width = 25
-let g:tagbar_autofocus = 1
+" let g:tagbar_autofocus = 1
+
+augroup pluginInit
+	autocmd!
+	autocmd VimEnter * :NERDTree
+	autocmd VimEnter * :TagbarToggle
+	autocmd GUIEnter * :simalt ~x
+augroup END
 
 
 """"""""""""""""""""""""""""""""
