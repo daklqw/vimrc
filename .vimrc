@@ -15,7 +15,7 @@ endif
 """"""""""""""""""""""""""""""""
 set backspace=indent,eol,start
 set guioptions=
-set guifont=Courier\ New:h14b
+set guifont=Iosevka:h13
 set number relativenumber
 set list listchars=tab:\|\ ,trail:@
 set tabstop=4 shiftwidth=4
@@ -36,13 +36,20 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'preservim/nerdtree'
+Plugin 'preservim/tagbar'
 call vundle#end()
 filetype plugin indent on " This may cause shit-like experience of Python
 
 """"""""""""""""""""""""""""""""
-" Airline configure (Plugin vim-airline)
+" Plugin configure
 """"""""""""""""""""""""""""""""
+" Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" Tagbar
+let g:tagbar_width = 25
+let g:tagbar_autofocus = 1
+
 
 """"""""""""""""""""""""""""""""
 " Functions
@@ -77,13 +84,14 @@ nnoremap <leader>cc <ESC>:call snippet#insertComment()<CR>
 
 " File
 nnoremap <leader>ff <ESC>:call OpenFileInFileManager()<CR>
-nnoremap <leader>ft <ESC>:NERDTree<CR>
+nnoremap <leader>fe <ESC>:NERDTree<CR>
 
 " Project
 nnoremap <leader>pr <ESC>:call project#reloadConfigure()<CR>
 
 " cTags
-nnoremap <leader>tt <ESC>:silent !ctags -R<CR>
+nnoremap <leader>tr <ESC>:silent !ctags -R<CR>
+nnoremap <leader>tt <ESC>:TagbarToggle<CR>
 
 " Vimrc
 nnoremap <leader>ve <ESC>:sp $MYVIMRC<CR>
