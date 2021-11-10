@@ -51,10 +51,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:tagbar_width = 25
 " let g:tagbar_autofocus = 1
 
+" NERDTree
+let NERDTreeShowHidden = 1
 augroup pluginInit
 	autocmd!
 	autocmd VimEnter * :NERDTree
 	autocmd VimEnter * :TagbarToggle
+	autocmd VimEnter * :wincmd p
 	autocmd GUIEnter * :simalt ~x
 augroup END
 
@@ -86,6 +89,7 @@ let mapleader = ","
 
 " Build
 nnoremap <leader>bb <ESC>:make<CR>
+nnoremap <leader>bt <ESC>:term<CR>
 
 " Comment
 nnoremap <leader>cc <ESC>:call snippet#insertComment()<CR>
