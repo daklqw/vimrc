@@ -53,6 +53,9 @@ let g:tagbar_width = 25
 
 " NERDTree
 let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\~$', '\.swp']
+
+" plugin initialization
 augroup pluginInit
 	autocmd!
 	autocmd VimEnter * :NERDTree
@@ -68,7 +71,7 @@ augroup END
 function OpenFileInFileManager()
 	" explorer only accepts '\'
 	let l:fileName = substitute(expand("%:p"), '/', '\\', 'g')
-	silent execute ':!explorer /select,'.l:fileName
+	silent execute ':silent !explorer /select,'.l:fileName
 endfunction
 
 """"""""""""""""""""""""""""""""
