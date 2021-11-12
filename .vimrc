@@ -21,6 +21,9 @@ set list listchars=tab:\|\ ,trail:@
 set tabstop=4 shiftwidth=4
 set cursorline
 set splitbelow
+set encoding=cp936
+set fileencodings=utf8,cp936
+set fileencoding=utf8
 colorscheme PaperColor
 syntax on
 
