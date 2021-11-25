@@ -51,20 +51,20 @@ filetype plugin indent on " This may cause shit-like experience of Python
 let g:airline#extensions#tabline#enabled = 1
 
 " Tagbar
-let g:tagbar_width = 25
+" let g:tagbar_width = 25
 " let g:tagbar_autofocus = 1
 
 " NERDTree
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\~$', '\.swp']
+" let NERDTreeShowHidden = 1
+" let NERDTreeIgnore = ['\~$', '\.swp']
 
 " plugin initialization
 augroup pluginInit
 	autocmd!
-	autocmd VimEnter * :NERDTree
-	autocmd VimEnter * :TagbarToggle
-	autocmd VimEnter * :wincmd p
-	autocmd GUIEnter * :simalt ~x
+"	autocmd VimEnter * :NERDTree
+"	autocmd VimEnter * :TagbarToggle
+"	autocmd VimEnter * :wincmd p
+"	autocmd GUIEnter * :simalt ~x
 augroup END
 
 
@@ -102,14 +102,14 @@ nnoremap <leader>cc <ESC>:call snippet#insertComment()<CR>
 
 " File
 nnoremap <leader>ff <ESC>:call OpenFileInFileManager()<CR>
-nnoremap <leader>fe <ESC>:NERDTree<CR>
+" nnoremap <leader>fe <ESC>:NERDTree<CR>
 
 " Project
 nnoremap <leader>pr <ESC>:call project#reloadConfigure()<CR>
 
 " cTags
 nnoremap <leader>tr <ESC>:silent !ctags -R<CR>
-nnoremap <leader>tt <ESC>:TagbarToggle<CR>
+" nnoremap <leader>tt <ESC>:TagbarToggle<CR>
 
 " Vimrc
 nnoremap <leader>ve <ESC>:sp $MYVIMRC<CR>
