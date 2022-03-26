@@ -15,7 +15,7 @@ endif
 """"""""""""""""""""""""""""""""
 set backspace=indent,eol,start
 set guioptions=
-set guifont=Iosevka:h13
+set guifont=Iosevka:h16
 set number relativenumber
 set list listchars=tab:\|\ ,trail:@
 set tabstop=4 shiftwidth=4
@@ -40,7 +40,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'preservim/nerdtree'
-Plugin 'preservim/tagbar'
+" Plugin 'preservim/tagbar'
 call vundle#end()
 filetype plugin indent on " This may cause shit-like experience of Python
 
@@ -84,6 +84,10 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+vnoremap j gj
+vnoremap k gk
+vnoremap gj j
+vnoremap gk k
 nnoremap <M-h> <C-W>h
 nnoremap <M-j> <C-W>j
 nnoremap <M-k> <C-W>k
